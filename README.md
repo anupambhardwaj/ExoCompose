@@ -3,7 +3,7 @@ Media player library for Jetpack Compose and Media3 Library
 
 # Download
 
-Add the following line of code in your project level `build.gradle` file
+Add the following line of code in your project level `settings.gradle.kts` file
 
 ```
 dependencyResolutionManagement {
