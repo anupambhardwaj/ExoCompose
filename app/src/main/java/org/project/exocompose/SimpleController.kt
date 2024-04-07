@@ -50,14 +50,14 @@ fun SimpleController(
                     .background(Color(0x98000000))
             , contentAlignment = Alignment.Center
             ) {
-                Row(
-                    modifier = Modifier
-                    .align(Alignment.Center)
-                    .fillMaxWidth()
-                    .padding(horizontal = (screenWidth/4).dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
+//                Row(
+//                    modifier = Modifier
+//                    .align(Alignment.Center)
+//                    .fillMaxWidth()
+//                    .padding(horizontal = (screenWidth/4).dp),
+////                    horizontalArrangement = Arrangement.SpaceBetween,
+//                    verticalAlignment = Alignment.CenterVertically
+//                ) {
                     Image(
                         painter = painterResource(
                             if (controllerState.showPause) R.drawable.baseline_pause_24
@@ -75,7 +75,7 @@ fun SimpleController(
                             },
                         colorFilter = ColorFilter.tint(Color.White)
                     )
-                }
+//                }
 
 
                 LaunchedEffect(Unit) {
