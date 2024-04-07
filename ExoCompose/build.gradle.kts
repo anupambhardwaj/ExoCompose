@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("maven-publish")
 }
 
 android {
@@ -36,6 +37,17 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+    afterEvaluate {
+        publishing {
+            publications {
+                create<MavenPublication>("release") {
+                    groupId = "com.github.anupambhardwaj"
+                    artifactId = "ExoCompose"
+                    version = "1.0.1"
+                }
+            }
         }
     }
 }
